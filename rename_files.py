@@ -9,6 +9,8 @@ def rename_files():
 	os.chdir("/home/sreesan/Projects/Python/secret_message/prank/")
 	# (2) for each file, rename filename
 	for file_name in file_list:
+		print ("Old Name: "+file_name)
+		print ("New Name: "+file_name.lstrip("0123456789"))
 		os.rename(file_name, file_name.lstrip("0123456789"))
 	os.chdir(saved_path)
 
